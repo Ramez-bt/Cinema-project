@@ -1,0 +1,120 @@
+/* Reset de base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: "Segoe UI", Roboto, sans-serif;
+    background-color: #f7f7f7;
+    color: #222;
+    padding: 20px;
+    line-height: 1.6;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  /* Container pour les films */
+  #movies-container,
+  #search-results {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 10px 0;
+  }
+  
+  /* Chaque film (ou résultat) */
+  #movies-container div,
+  #search-results div {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
+  }
+  
+  #movies-container div:hover,
+  #search-results div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.12);
+  }
+  
+  /* Titres de films */
+  h2, h3 {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    color: #444;
+  }
+  
+  /* Images de films */
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  /* Lien "En savoir plus" */
+  a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Champ de recherche */
+  #search-input {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px;
+    font-size: 1rem;
+    margin: 0 auto 30px;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  /* Page des détails film */
+  #movie-details {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  #movie-details img {
+    float: left;
+    margin-right: 20px;
+    max-width: 200px;
+    border-radius: 10px;
+  }
+  
+  #movie-details h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  #movie-details p {
+    margin-bottom: 12px;
+  }
+  
+  @media (max-width: 600px) {
+    #movie-details img {
+      float: none;
+      margin: 0 auto 20px;
+      display: block;
+    }
+  }
+  
